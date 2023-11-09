@@ -22,7 +22,6 @@ def visualize_confidence_level(prediction_proba):
     this function uses matplotlib to create inference bar chart rendered with streamlit in real-time 
     return type : matplotlib bar chart  
     """
-    fig, ax = plt.subplots()
     data = (prediction_proba[0]*100).round(2)
     grad_percentage = pd.DataFrame(data = data,columns = ['Percentage'],index = ['Low','Ave','High'])
     ax = grad_percentage.plot(kind='barh', figsize=(7, 4), color='#722f37', zorder=10, width=0.5)
@@ -44,7 +43,6 @@ def visualize_confidence_level(prediction_proba):
     ax.set_ylabel("Wine Quality", labelpad=10, weight='bold', size=12)
     ax.set_title('Prediction Confidence Level ', fontdict=None, loc='center', pad=None, weight='bold')
 
-    st.pyplot(fig)
     return
 
 st.write("""
