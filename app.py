@@ -32,6 +32,9 @@ def visualize_confidence_level(prediction_proba):
     ax.spines['top'].set_visible(False)
     ax.spines['left'].set_visible(True)
     ax.spines['bottom'].set_visible(True)
+    ax.set_option('deprecation.showPyplotGlobalUse', False)
+
+
 
     ax.tick_params(axis="both", which="both", bottom="off", top="off", labelbottom="on", left="off", right="off", labelleft="on")
     
